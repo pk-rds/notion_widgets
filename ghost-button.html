@@ -1,24 +1,222 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
 
+<head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet" />
 
-<style>
 
-button {
-	padding: 10px 10px;
-	cursor: pointer;
-	font-family: "Montserrat", sans-serif;
-	font-size: 14px;
-	text-align: center;
-        display: inline-block;
-}
+  <style>
+   
+    button {
+      border: none;
+      cursor: pointer;
+      padding: 10px 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
 
-#circle {
+
+    .btn {
+      text-align: center;
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .my-color {
+      background-color: var(--my-color);
+    }
+
+    .my-color:hover {
+      background-color: var(--my-color-accent);
+    }
+
+    .my-color.threeD {
+      box-shadow: 0px 4px 0px var(--my-color-accent);
+    }
+
+    .my-color.threeD:active {
+      box-shadow: 0 0;
+      background-color: var(--my-color-accent);
+    }
+	  
+    .black {
+      background-color: var(--black);
+    }
+
+    .black:hover {
+      background-color: var(--black-accent);
+    }
+
+    .black.threeD {
+      box-shadow: 0px 4px 0px var(--black-accent);
+    }
+
+    .black.threeD:active {
+      box-shadow: 0 0;
+      background-color: var(--black-accent);
+    }
+
+    .blue {
+      background-color: var(--blue);
+    }
+
+    .blue:hover {
+      background-color: var(--blue-accent);
+    }
+
+    .blue.threeD {
+      box-shadow: 0px 4px 0px var(--blue-accent);
+    }
+
+    .blue.threeD:active {
+      box-shadow: 0 0;
+      background-color: var(--blue-accent);
+    }
+
+    .purple {
+      background-color: var(--purple);
+    }
+
+    .purple:hover {
+      background-color: var(--purple-accent);
+    }
+
+    .purple.threeD {
+      box-shadow: 0px 4px 0px var(--purple-accent);
+    }
+
+    .purple.threeD:active {
+      box-shadow: 0 0;
+      background-color: var(--purple-accent);
+    }
+
+    .mint {
+      background-color: var(--mint);
+    }
+
+    .mint:hover {
+      background-color: var(--mint-accent);
+    }
+
+    .mint.threeD {
+      box-shadow: 0px 4px 0px var(--mint-accent);
+    }
+
+    .mint.threeD:active {
+      box-shadow: 0 0;
+      background-color: var(--mint-accent);
+    }
+
+    .pink {
+      background-color: var(--pink);
+    }
+
+    .pink:hover {
+      background-color: var(--pink-accent);
+    }
+
+    .pink.threeD {
+      box-shadow: 0px 4px 0px var(--pink-accent);
+    }
+
+    .pink.threeD:active {
+      box-shadow: 0 0;
+      background-color: var(--pink-accent);
+    }
+
+    .green {
+      background-color: var(--green);
+    }
+
+    .green:hover {
+      background-color: var(--green-accent);
+    }
+
+    .green.threeD {
+      box-shadow: 0px 4px 0px var(--green-accent);
+    }
+
+    .green.threeD:active {
+      box-shadow: 0 0;
+      background-color: var(--green-accent);
+    }
+
+    .red {
+      background-color: var(--red);
+    }
+
+    .red:hover {
+      background-color: var(--red-accent);
+    }
+
+    .red.threeD {
+      box-shadow: 0px 4px 0px var(--red-accent);
+    }
+
+    .red.threeD:active {
+      box-shadow: 0 0;
+      background-color: var(--red-accent);
+    }
+
+    .orange {
+      background-color: var(--orange);
+    }
+
+    .orange:hover {
+      background-color: var(--orange-accent);
+    }
+
+    .orange.threeD {
+      box-shadow: 0px 4px 0px var(--orange-accent);
+    }
+
+    .orange.threeD:active {
+      box-shadow: 0 0;
+      background-color: var(--orange-accent);
+    }
+
+    .yellow {
+      background-color: var(--yellow);
+    }
+
+    .yellow:hover {
+      background-color: var(--yellow-accent);
+    }
+
+    .yellow.threeD {
+      box-shadow: 0px 4px 0px var(--yellow-accent);
+    }
+
+    .yellow.threeD:active {
+      box-shadow: 0 0;
+      background-color: var(--yellow-accent);
+    }
+
+    .rounded {
+      border-radius: 20px;
+    }
+
+    .small {
+      padding: 5px 20px;
+      font-size: 10px;
+    }
+
+    .mid {
+      padding: 10px 40px;
+      font-size: 12px;
+    }
+
+    .large {
+      padding: 15px 60px;
+      font-size: 18px;
+    }
+	  
+    .circle {
 	width: 8rem;
 	border-radius: 10px;
 	border: 2px solid #CB912F;
@@ -28,8 +226,8 @@ button {
 	overflow: hidden;
 	transition: background 800ms ease, color 800ms ease, transform 500ms ease;
 }
-
-#circle::before {
+  
+    .circle::before {
 	content: "";
 	width: 100%;
 	height: 8rem;
@@ -42,34 +240,32 @@ button {
 	z-index: -1;
 }
 
-#circle:hover:before {
+    .circle:hover:before {
 	top: -150%;
 }
 
-#circle:hover {
+    .circle:hover {
 	background: #CB912F;
 	color: #fff;
 }
 
-#circle:active {
+    .circle:active {
 	transform: scale(0.9);
-}
-
-</style>
+	
+	</style>
 
 </head>
+
 <body>
-  <div id="container">
-	<button id="circle">View Resume</button>
-</div>
 
-
-<script>
+  <button class="btn circle" type="button" onclick="navigate()">View My Resume</button>
+  
+  <script>
     function navigate() {
-      window.open("https://www.notion.so/rdsimon-ux/Rahbi-Dijon-Simon-b7474cb3aef74fb0a7a2e62c4d2f4537?pvs=4", '_parent').focus();
+      window.open("https://rdsimon-ux.notion.site/Rahbi-Dijon-Simon-b7474cb3aef74fb0a7a2e62c4d2f4537", '_parent').focus();
     }
-
   </script>
 
 </body>
+
 </html>
